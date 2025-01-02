@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&family=Shrikhand&display=swap');
 
-*{
+h1,h2,h3{
     font-family: "Gabarito";
+}
+*{
+    font-family: "Inter";
+
 }
 .list-points{
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZWNrIj48cGF0aCBkPSJNMjAgNiA5IDE3bC01LTUiLz48L3N2Zz4=);
     line-height: 30px;
     padding-left: 30px;
+}
+.square-pattern{
+    background-color: #ededf346;
+    
+    background-image:  linear-gradient(#b1adad34 1px, transparent 1px), linear-gradient(to right, #d9d9dd5b 1px, #f9f9ff5d 1px);
+    background-size: 80px 80px;
 }
 
