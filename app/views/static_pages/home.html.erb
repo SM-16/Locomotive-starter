@@ -1,13 +1,44 @@
 
 
 <%# Home %>
-<section class="min-h-screen bg-slate-100 flex flex-col items-center gap-32 gradient-pattern square-pattern ">
+<section class="min-h-screen bg-slate-100 flex flex-col items-center gap-32 gradient-pattern square-pattern">
     <%= render "static_pages/home_sections/section_1"%>
     <%= render "static_pages/components/hr"%>
+    <a class="link link-hover" title="Pricing" href="#pricing">Pricing</a>
 
-    <%#= render "static_pages/home_sections/section_2"%>
-    <%#= render "static_pages/home_sections/section_3"%>
+    <%= render "static_pages/home_sections/section_2"%>
+    <%= render "static_pages/home_sections/section_3"%>
     <%#= render "static_pages/ProductHunt_badge"%>
     <%#= render "static_pages/footer"%>
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+
+
+<h1 id="pricing">Pricing</h1>

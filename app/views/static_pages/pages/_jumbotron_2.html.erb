@@ -1,0 +1,30 @@
+<div class="flex lg:flex-row flex-col p-5 mx-10 pt-[120px]"data-turbo="false">
+    <div class="fly-in flex flex-col" data-turbo="false">
+        <div class="w-[650px]">
+            <h1 class="font-extrabold text-6xl text-slate-900 tracking-tight mt-20">
+                Finish your projects 2X faster,
+                <span class="">
+                    Store code in one place
+                </span>
+            </h1>
+            <p class="w-[500px] mt-5">
+                Codebrisk is a code snippet managaer. This tool is for 
+                <i>all kinds of software developers</i> (webs, games, apps).
+            </p>
+        </div>
+    <%if user_signed_in?%>
+        <%= button_to stripe_checkout_path,
+        class:"flex justify-center items-center gap-2 w-[200px] p-3 mt-5 group rounded-md font-semibold bg-blue-500 hover:bg-blue-600 text-slate-50 transition-all active:scale-95" do%>
+            Upgrade codebrisk
+            <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        <%end%>
+    <%else%>
+        <%= link_to new_user_registration_path,
+        class:"flex justify-center items-center gap-2 w-[200px] p-3 mt-5 group rounded-md font-semibold bg-blue-500 hover:bg-blue-600 text-slate-50 transition-all active:scale-95" do%>
+            Log in
+            <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        <%end%>
+    <%end%>
+    </div>
+        
+</div>
