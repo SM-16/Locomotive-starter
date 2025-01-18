@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   private
 
   def allow_iframe
-    response.headers['X-Frame-Options'] = 'ALLOW-FROM https://codebrisk.co'
     response.headers['X-Frame-Options'] = 'ALLOW-FROM http://localhost:3000'
   end
 end
