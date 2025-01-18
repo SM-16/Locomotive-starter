@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Blog2
   class Application < Rails::Application
+    config.action_dispatch.default_headers.merge!('X-Frame-Options' => 'ALLOW-FROM https://raiselements.com')
     config.action_dispatch.default_headers.merge!('X-Frame-Options' => 'ALLOW-FROM http://localhost:3000')
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
