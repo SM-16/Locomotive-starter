@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html class="scroll-smooth">
   <head>
-    <title>Rails Elements: ruby on rails components</title>
     <meta name="robots" content="index,follow">
     <%= favicon_link_tag 'icon.png', type: 'image/png' %>
-    <meta name="description" content="rails elements is a ruby on rails components library. It has a newsletter that brings you free rails view components, CSS tips and product updates">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="keywords" content="
-    ruby on rails components,
+    
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tag %>
+    
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <% title 'Ruby on rails components: Rails Elements' %>
+    <% description 'rails elements is a ruby on rails components library. It has a newsletter that brings you free rails view components, CSS tips and product updates' %>
+    <% keywords 'ruby on rails components,
     rails components,
     rails partials,
     component rails,
@@ -27,27 +42,11 @@
     react component rails,
     ruby on rails dropdown,
     ruby on rails server side rendering,
-    ruby on rails ui components">
-
-
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tag %>
+    ruby on rails ui components' %>
     
-    <%= csp_meta_tag %>
-
-    <%= yield :head %>
-
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
+    <%= display_meta_tags %>
   </head>
-
+  
   <body class="bg-slate-100 overflow-x-hidden ">
     <%= yield %>
   </body>
