@@ -6,10 +6,8 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Blog2
+module Railselements
   class Application < Rails::Application
-    config.action_dispatch.default_headers.merge!('X-Frame-Options' => 'ALLOW-FROM https://raiselements.com')
-    config.action_dispatch.default_headers.merge!('X-Frame-Options' => 'ALLOW-FROM http://localhost:3000')
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.2
 

@@ -1,7 +1,8 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  Rails.application.routes.default_url_options[:host] = 'www.raiselements.com'
+  config.action_mailer.default_url_options = { host: 'www.raiselements.com'}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -73,7 +74,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter = :resque
-  # config.active_job.queue_name_prefix = "blog2_production"
+  # config.active_job.queue_name_prefix = "railselements_production"
 
   # Disable caching for Action Mailer templates even if Action Controller
   # caching is enabled.
