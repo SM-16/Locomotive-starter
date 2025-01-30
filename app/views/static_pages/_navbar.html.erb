@@ -1,16 +1,26 @@
-<header class="w-full z-50 px-5  h-[100px] flex items-center *:font-semibold  bg-white">
-    <nav class="flex items-center gap-5 h-full">
-        <%= link_to  root_path, class:"font-bold text-lg text-gradient w-[48px]" do%>
-            <%= image_tag("/icon.png")%>
-            
-        <%end%>
-        <%= link_to "Home", root_path %>
-        <%= link_to "Pricing", static_pages_pricing_path %>
 
+<header class="w-full fixed z-50 px-5  h-[100px] flex items-center *:font-semibold border-b text-slate-800 bg-white">
+    <nav class="flex items-center gap-5 h-full">
+        <%= link_to  root_path, class:"font-bold text-lg text-gradient w-10" do%>
+        <%= image_tag("/icon(16).png")%>
+        
+        <%end%>
+        <a class="link link-hover" title="Home" href="#home">Home</a>
+        <a class="link link-hover" title="Pricing" href="#pricing">Pricing</a>
+        
+        
+        
+        
     </nav>
     <div class="flex w-full justify-end items-center gap-5 mr-">
         <%if user_signed_in?%>
-
+            <% if current_user.plan =="starter"%>
+                <%= link_to "Documentation", documentation_docs_page_path%>
+            <% elsif current_user.plan =="premimum"%>
+                <%= link_to "Documentation", documentation_docs_page_updated_path%>
+            <%else%>
+                <%= link_to "Documentation", documentation_docs_page_free_path%>
+            <%end%>
             <p class="border border-red-300 bg-red-100 text-red-500 rounded-md px-3 p-1">
                 <%= current_user.plan%>
             </p>

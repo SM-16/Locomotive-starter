@@ -1,6 +1,6 @@
 
 /************
- * * Fade in
+ * * Fade
 *************/
 .fade-in {
     animation: fade-in 1s ease-in-out forwards;
@@ -107,7 +107,7 @@
 }
 
 /************
- * * Fly In
+ * * Fly 
 *************/
 
 .fly-in {
@@ -204,7 +204,7 @@
 }
 
 /************
- * * Funny animations
+ * * Other animations
 *************/
 
 

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "documentation/docs_page_free"
+  get "documentation/docs_page"
+  get "documentation/docs_page_updated"
   get "static_pages/home"
   get "static_pages/pricing"
   get "static_pages/successful_payment"
@@ -24,7 +27,8 @@ Rails.application.routes.draw do
   }
 
   # Stripe
-  post "stripe/checkout", to: "stripe#checkout"
+  post "stripe/starter_checkout", to: "stripe#starter_checkout"
+  post "stripe/premium_checkout", to: "stripe#premium_checkout"
   post "stripe/webhook", to: "stripe#webhook"
   
   # Render dynamic PWA files from app/views/pwa/*

@@ -1,56 +1,67 @@
-
-<div class=" flex flex-col justify-center items-center min-h-[calc(100vh-550px)] h-fit w-[470px]  rounded-md p-5 bg-slate-100 border border-red-500">
+<div
+    class=" flex flex-col justify-center items-center min-h-[calc(100vh-550px)] h-fit w-[470px] rounded-md p-5 bg-slate-100 border border-rose-500">
     <div class="w-full">
 
-        <h3 class="flex items-end gap-2 font-bold text-5xl text-slate-700 ">
+        <h3 class="flex flex-col justify-end gap-2 font-bold text-5xl text-slate-600">
             <div class="flex items-center gap-2">
-                <span class="line-through text-lg">$99</span>
                 $59
             </div>
-        <span class="text-3xl">/month</span>
+            <br>
+            <span class="text-base font-semibold text-rose-600">One-time-investment</span>
 
         </h3>
-        <ul class="mt-10 list-inside space-y-3">
+        <ul class="mt-5 list-inside space-y-3">
             <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
-                Benefit #1            
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Rails Elements 1.0
+
             </li>
             <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
-                Benefit #2 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Reusable components
             </li>
             <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
-                Benefit #3           
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Animations
             </li>
             <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
-                Benefit #4     
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-check">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg>
+                JS scrpits for front-end
             </li>
-            <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
-                Benefit #5     
-            </li>
-            <li class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
-                Benefit #6     
-            </li>
-    
+
+
         </ul>
 
     </div>
+
     <%if user_signed_in?%>
-        <%= button_to "",
-        class:"flex justify-center items-center gap-2 w-[420px] p-3 mt-5 group rounded-md font-semibold bg-red-500 hover:bg-red-600 text-slate-50 transition-all" do%>
-            Get Locomotive
-            <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
-        <%end%>
-    <%else%>
-        <%= link_to "",
-        class:"flex justify-center items-center gap-2 w-[420px] p-3 mt-5 group rounded-md font-semibold bg-red-500 hover:bg-red-600 text-slate-50 transition-all" do%>
-            Get Locomotive
-            <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
-        <%end%>
+    <%= button_to stripe_starter_checkout_path,
+    class:"flex justify-center items-center w-[440px] gap-2 shadow-lg p-4 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-slate-50 transition-all" do%>
+        Get rails elements
+        <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
+    <%end%>
+<%else%>
+    <%= link_to new_user_session_path, target:"_blank",
+    class:"flex justify-center items-center w-full gap-2 shadow-lg p-4 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-slate-50 transition-all" do%>
+        Get rails elements
+        <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
+    <%end%>
     <%end%>
 
 </div>

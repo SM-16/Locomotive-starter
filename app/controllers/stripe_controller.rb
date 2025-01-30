@@ -1,14 +1,27 @@
 class StripeController < ApplicationController
     skip_before_action :verify_authenticity_token, only: %i[webhook]
     
-    def checkout
+    def starter_checkout
         @session = Stripe::Checkout::Session.create({
-            mode:"subscription",
+            mode:"payment",
             success_url: root_url,
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"your-price-id",
+                price:"price_1PwfNzKa5vbvZR8V9f0IwNP0",
+                quantity: 1,
+            }]
+        })
+        redirect_to @session.url, status: 303, allow_other_host: true
+    end
+    def premium_checkout
+        @session = Stripe::Checkout::Session.create({
+            mode:"payment",
+            success_url: root_url,
+            cancel_url: root_url,
+            customer: current_user.stripe_customer_id,
+            line_items:[{
+                price:"price_1Ql4QkKa5vbvZR8Vyid1OQzT",
                 quantity: 1,
             }]
         })
@@ -18,7 +31,7 @@ class StripeController < ApplicationController
 
     def webhook
 
-        Stripe.api_key = ENV["STRIPE_SECRET_KEY"]
+        Stripe.api_key = ENV["STRIPE_SECRET_LIVE_API_KEY"]
         Stripe.api_version = '2024-06-20'
 
         # This is your Stripe CLI webhook secret for testing your endpoint locally.
@@ -51,9 +64,9 @@ class StripeController < ApplicationController
                     
                 when 'customer.subscription.updated'
                     stripe_subscription = event.data.object
-                    if stripe_subscription.amount_total == 2000
+                    if stripe_subscription.amount_total == 5900
                         @user.update(subscription_status: "starter")
-                    elsif stripe_subscription.amount_total == 4000
+                    elsif stripe_subscription.amount_total == 77 m00
                         @user.update(subscription_status: "premium")
                     end
     

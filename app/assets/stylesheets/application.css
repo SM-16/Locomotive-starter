@@ -16,7 +16,7 @@ h1,h2,h3{
 .square-pattern{
     background-color: #ededf369;
     
-    background-image:  linear-gradient(#b1adad34 1px, transparent 1px), linear-gradient(to right, #d9d9dd5b 1px, #f9f9ff5d 1px);
+    background-image:  linear-gradient(#b1adad48 1px, transparent 1px), linear-gradient(to right, #d9d9dd5b 1px, #f9f9ff5d 1px);
     background-size: 160px 160px;
 }
 

@@ -1,13 +1,6 @@
 <div class="flex justify-start items-center gap-5">
 
-  <%- if devise_mapping.omniauthable? %>
-    <%- resource_class.omniauth_providers.each do |provider|%>
-      <%= form_for "Login", url:omniauth_authorize_path(resource_name, provider),method: :post, data:{turbo: "false"} do |f|%>
-        <%= f.submit "Login", type:"image", src: url_for("/assets/google-Oauth-neutral.png"),method: :post, 
-        class:"border border-black rounded-md max-h-[40px] " %>
-      <%end%>
-    <%end%>
-  <%end%>
+
   <div class="flex justify-end w-full">
     <%- if controller_name != 'sessions' %>
       <%= link_to "Log in", new_session_path(resource_name), class:"bg-slate-100 border border-black p-2  text-center w-full max-h-[40px] rounded-md -mt-1.5" %><br />
