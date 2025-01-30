@@ -31,7 +31,7 @@ class StripeController < ApplicationController
 
     def webhook
 
-        Stripe.api_key = ENV["STRIPE_SECRET_LIVE_API_KEY"]
+        Stripe.api_key = ENV["STRIPE_SECRET_API_KEY"]
         Stripe.api_version = '2024-06-20'
 
         # This is your Stripe CLI webhook secret for testing your endpoint locally.
