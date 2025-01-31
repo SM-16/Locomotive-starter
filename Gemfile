@@ -66,3 +66,4 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2' 
 gem 'omniauth-rails_csrf_protection'
 gem "tailwindcss-rails", "~> 3.1"
+gem "image_processing", "~> 1.0"
