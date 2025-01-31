@@ -72,6 +72,7 @@ class StripeController < ApplicationController
                         @user.update(plan: "premium")
                     end
                     @user.update(plan: "starter")
+                    puts "aaaaaaaaaaaaaaaaaaaaaaaa"
                     
                 else
                     puts "Unhandled event type: #{event.type}"
