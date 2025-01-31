@@ -16,7 +16,7 @@
         <%if user_signed_in?%>
             <% if current_user.plan =="starter"%>
                 <%= link_to "Documentation", documentation_docs_page_path%>
-            <% elsif current_user.plan =="premimum"%>
+            <% elsif current_user.plan =="premium"%>
                 <%= link_to "Documentation", documentation_docs_page_updated_path%>
             <%else%>
                 <%= link_to "Documentation", documentation_docs_page_free_path%>
