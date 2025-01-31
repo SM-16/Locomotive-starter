@@ -71,7 +71,8 @@ class StripeController < ApplicationController
                     elsif stripe_subscription.amount_total == 7700
                         @user.update(plan: "premium")
                     end
-    
+                    @user.update(plan: "starter")
+                    
                 else
                     puts "Unhandled event type: #{event.type}"
                 end
