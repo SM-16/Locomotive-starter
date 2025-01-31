@@ -66,7 +66,7 @@ class StripeController < ApplicationController
                     stripe_subscription = event.data.object
                     if stripe_subscription.amount_total == 5900
                         @user.update(subscription_status: "starter")
-                    elsif stripe_subscription.amount_total == 77 m00
+                    elsif stripe_subscription.amount_total == 7700
                         @user.update(subscription_status: "premium")
                     end
     
