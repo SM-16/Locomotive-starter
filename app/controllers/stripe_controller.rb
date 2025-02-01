@@ -8,7 +8,7 @@ class StripeController < ApplicationController
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"price_1PwfNzKa5vbvZR8V9f0IwNP0",
+                price:"price_1QnZAVKa5vbvZR8VtVzbooMt",
                 quantity: 1,
             }]
         })
@@ -21,7 +21,7 @@ class StripeController < ApplicationController
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"price_1Ql4QkKa5vbvZR8Vyid1OQzT",
+                price:"price_1QnZAdKa5vbvZR8VQkkAxM2m",
                 quantity: 1,
             }]
         })
