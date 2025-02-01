@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blog
   get "documentation/docs_page_free"
   get "documentation/docs_page"
   get "documentation/docs_page_updated"
