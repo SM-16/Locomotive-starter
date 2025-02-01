@@ -75,6 +75,18 @@ class StripeController < ApplicationController
                     puts "aaaaaaaaaaaaaaaaaaaaaaaa"
                     
                 else
+                when 'checkout.session.completed'
+                    session = event.data.object
+                    if session.amount_total == 5900
+                        @user.update(plan: "starter")
+                    elsif session.amount_total == 1500
+                        @user.update(plan: "starter")
+                    elsif session.amount_total == 7700
+                        @user.update(plan: "premium")
+                    end
+   
+                    
+                else
                     puts "Unhandled event type: #{event.type}"
                 end
 
