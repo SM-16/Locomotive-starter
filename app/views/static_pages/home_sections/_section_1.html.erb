@@ -1,35 +1,37 @@
 <br id="home">
-<div class="flex flex-col lg:justify-start justify-center items-center h-[calc(100vh-200px)] p-5  mx-10"data-turbo="false">
-    <div class="fly-in flex flex-col justify-center lg:items-start items-center mt-32"  data-turbo="false">
+<div class="flex flex-col lg:justify-start justify-center lg:items-start items-center h-full p-5  mx-10"data-turbo="false">
+    <div class="flex lg:flex-row flex-col justify-center lg:items-start items-center mt-32"  data-turbo="false">
+        <div class="flex flex-col lg:items-start items-center">
             <h1 class="w-[800px] font-extrabold lg:text-8xl text-2xl lg:text-left text-center -ml-2 mt-10 tracking-tighter text-slate-800 backdrop:shadow-md">
                 Design rails websites 
                 <span class="text-rose-600">faster</span> than ever   
             </h1>
-            <p class="lg:w-[600px] w-[340px] lg:text-base text-sm lg:text-left text-center">
+            <p class="lg:w-[600px] w-[320px] lg:text-base text-sm lg:text-left text-center">
                 Rails Elements is a ruby on <span class="underline">rails UI library</span> for developers who want to <span class="underline">finsh projects faster</span>.
                 This template offers prebuilt pages, reusable components, JS scripts for the front-end and animations
                 
             </p>
-
-        <%if user_signed_in?%>
-            <%= button_to stripe_starter_checkout_path,
-            class:"flex justify-center items-center w-fit gap-2 shadow-lg p-4 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-slate-50 transition-all" do%>
-                Get rails elements
-                <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
+    
+            <%if user_signed_in?%>
+                <%= button_to stripe_starter_checkout_path,
+                class:"flex justify-center items-center w-fit gap-2 shadow-lg p-4 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-slate-50 transition-all" do%>
+                    Get rails elements
+                    <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
+                <%end%>
+            <%else%>
+                <%= link_to new_user_session_path, target:"_blank",
+                class:"flex justify-center items-center w-fit gap-2 shadow-lg p-4 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-slate-50 transition-all" do%>
+                    Get rails elements
+                    <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
+                <%end%>
             <%end%>
-        <%else%>
-            <%= link_to new_user_session_path, target:"_blank",
-            class:"flex justify-center items-center w-fit gap-2 shadow-lg p-4 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-slate-50 transition-all" do%>
-                Get rails elements
-                <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
-            <%end%>
-        <%end%>
+        </div>
 
 
-    </div>
-    <div class=" w-[320px]  flex  lg:ml-5 lg:-mt-10">
-        <%= image_tag("/hero-image.png", class:"relative lg:top-56 lg:-right-10 top-10 -right-28 lg:w-[300px] lg:h-[300px] w-[140px] h-[140px] object-cover")%>
-
+        <div class=" w-[320px]  flex  lg:ml-5 lg:-mt-10">
+            <%= image_tag("/hero-image.png", class:"relative lg:top-10 lg:-right-10 top-10 -right-28 lg:w-[300px] lg:h-[300px] w-[140px] h-[140px] object-cover")%>
+    
+        </div>
     </div>
     <div class="mx-auto w-[800px] h-fit rounded-md p-3 space-y-1 py-10 mt-20 text-center font-semibold text-slate-600">
         <p><span class="text-red-500">4 hours</span> for a landing page</p>
