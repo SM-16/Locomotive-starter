@@ -1,9 +1,8 @@
 
-<header class="w-full fixed z-50 px-5  h-[100px] flex items-center *:font-semibold border-b text-slate-800 bg-white">
-    <nav class="flex items-center gap-5 h-full">
+<header class="w-full fixed z-50 px-5 lg:pb-0 pb-2  lg:h-[100px] h-[300px] flex lg:flex-row flex-col items-center *:font-semibold border-b text-slate-800 bg-white">
+    <nav class="flex lg:flex-row flex-col items-center gap-5 h-full">
         <%= link_to  root_path, class:"font-bold text-lg text-gradient w-10" do%>
-        <%= image_tag("/icon(16).png")%>
-        
+            <%= image_tag("/icon(16).png")%>    
         <%end%>
         <a class="link link-hover" title="Home" href="#home">Home</a>
         <a class="link link-hover" title="Pricing" href="#pricing">Pricing</a>
@@ -12,7 +11,7 @@
         
         
     </nav>
-    <div class="flex w-full justify-end items-center gap-5 lg:mr-0 md:mr-10 mr-52">
+    <div class="w-full flex lg:flex-row flex-col lg:justify-end items-center gap-5 lg:mr-0 md:mr-10 ">
         <%if user_signed_in?%>
             <% if current_user.plan =="starter"%>
                 <%= link_to "Documentation", documentation_docs_page_path%>
