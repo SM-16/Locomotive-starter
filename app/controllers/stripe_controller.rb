@@ -8,7 +8,7 @@ class StripeController < ApplicationController
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"price_1PwfNzKa5vbvZR8V9f0IwNP0",
+                price:"price_1QnZAVKa5vbvZR8VtVzbooMt",
                 quantity: 1,
             }]
         })
@@ -21,7 +21,7 @@ class StripeController < ApplicationController
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"price_1Ql4QkKa5vbvZR8Vyid1OQzT",
+                price:"price_1QnZAdKa5vbvZR8VQkkAxM2m",
                 quantity: 1,
             }]
         })
@@ -74,7 +74,6 @@ class StripeController < ApplicationController
                     @user.update(plan: "starter")
                     puts "aaaaaaaaaaaaaaaaaaaaaaaa"
                     
-                else
                 when 'checkout.session.completed'
                     session = event.data.object
                     if session.amount_total == 5900
