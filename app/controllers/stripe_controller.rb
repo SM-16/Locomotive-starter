@@ -76,6 +76,8 @@ class StripeController < ApplicationController
                     
                 when 'checkout.session.completed'
                     session = event.data.object
+                    @user = User.find_by(stripe_customer_id: session.customer)
+
                     if session.amount_total == 5900
                         @user.update(plan: "starter")
                     elsif session.amount_total == 1500
