@@ -3,7 +3,7 @@
   <%= link_to root_path do%>
      <svg class="absolute top-5 left-4 stroke-slate-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left"><path d="M18 15h-6v4l-7-7 7-7v4h6v6z"/></svg>
   <%end%>
- <div class="bg-slate-100 shadow-lg p-4 w-[400px] h-fit flex flex-col items-center rounded-lg gap-5">
+ <div class="bg-slate-100 shadow-lg p-4 lg:w-[400px] md:w-[400px] w-[300px] h-fit flex flex-col items-center rounded-lg gap-5">
     <h2 class="text-red-500 drop-shadow-sm font-bold text-3xl ">Log In</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -12,7 +12,7 @@
         <div class="field ">
           <%= f.label :email , class:"font-semibold"%><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email",
-          class:"min-w-[375px] rounded-md p-2  border border-slate-300 bg-slate-100" %>
+          class:"lg:min-w-[375px] md:min-w-[375px] w-full rounded-md p-2  border border-slate-300 bg-slate-100" %>
         </div>
 
         <div class="field">
@@ -21,7 +21,7 @@
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
           <%= f.password_field :password, autocomplete: "current-password",
-          class:"min-w-[375px] rounded-md p-2  border border-slate-300 bg-slate-100" %>
+          class:"lg:min-w-[375px] md:min-w-[375px] w-full rounded-md p-2  border border-slate-300 bg-slate-100" %>
         </div>
 
         <% if devise_mapping.rememberable? %>
@@ -32,11 +32,11 @@
         <% end %>
         <div class="actions flex justify-center">
           <%= f.submit "Log in",
-          class:"bg-slate-900 text-slate-100 px-5 py-2 rounded-md font-semibold w-full mt-5 cursor-pointer" %>
+          class:"bg-slate-900 text-slate-100 px-5 py-2 rounded-md font-semibold lg:w-full md:w-full w-fit mt-5 cursor-pointer" %>
         </div>
       </div>
     <% end %>
-    <div class="w-full">
+    <div class="w-full flex justify-center">
       <%= render "devise/shared/links" %>
     </div>
 
