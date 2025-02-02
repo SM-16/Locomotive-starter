@@ -22,31 +22,31 @@
       <div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:"text-pink-600 hover:underline"%> </div>
       <%end%>
       <hr>
-      <li><button  class="text-slate-600 cursor-default">companies</button></li>
-      <li><button  class="text-slate-600 cursor-default">copy code</button></li>
-      <li><button  class="text-slate-600 cursor-default">checkbox</button></li>
-      <li><button  class="text-slate-600 cursor-default">copyright footer</button></li>
-      <li><button  class="text-slate-600 cursor-default">features</button></li>
-      <li><button  class="text-slate-600 cursor-default">footer</button></li>
-      <li><button  class="text-slate-600 cursor-default">github</button></li>
-      <li><button  class="text-slate-600 cursor-default">headlines</button></li>
-      <li><button  class="text-slate-600 cursor-default">indicator</button></li>
-      <li><button  class="text-slate-600 cursor-default">jumbotron</button></li>
-      <li><button  class="text-slate-600 cursor-default">kbd</button></li>
-      <li><button  class="text-slate-600 cursor-default">links</button></li>
-      <li><button  class="text-slate-600 cursor-default">navbar</button></li>
-      <li><button  class="text-slate-600 cursor-default">navbar (glossy)</button></li>
-      <li><button  class="text-slate-600 cursor-default">loading</button></li>
-      <li><button  class="text-slate-600 cursor-default">pricing</button></li>
-      <li><button  class="text-slate-600 cursor-default">product hunt badge</button></li>
-      <li><button  class="text-slate-600 cursor-default">quote</button></li>
-      <li><button  class="text-slate-600 cursor-default">select</button></li>
-      <li><button  class="text-slate-600 cursor-default">skeleton</button></li>
-      <li><button  class="text-slate-600 cursor-default">social media</button></li>
-      <li><button  class="text-slate-600 cursor-default">speed dial</button></li>
-      <li><button  class="text-slate-600 cursor-default">testimonials</button></li>
-      <li><button  class="text-slate-600 cursor-default">toggle</button></li>
-      <li><button  class="text-slate-600 cursor-default">video</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">companies</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">copy code</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">checkbox</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">copyright footer</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">features</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">footer</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">github</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">headlines</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">indicator</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">jumbotron</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">kbd</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">links</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">navbar</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">navbar (glossy)</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">loading</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">pricing</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">product hunt badge</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">quote</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">select</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">skeleton</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">social media</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">speed dial</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">testimonials</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">toggle</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed">video</button></li>
     </ul>
 
   </div>
@@ -175,9 +175,9 @@
     <section id="card" class="mb-20">
       <h2 class="text-2xl font-bold mb-4">Card</h2>
       <div class="mb-4">
-        <%= render "static_pages/components/card", text:"Card title", description:"Card description",bg_color:"red", size_px:100%>
+        <%= render "static_pages/components/card", title:"Card title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",bg_color:"red", size_px:100%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/card", title:"Card title", description:"Card description"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/card", title:"Card title", text:" Lorem ipsum dolor sit amet, consectetur adipiscing elit. "%&gt;</code></pre>
     </section>
 
     <section id="companies" class="mb-20" >
