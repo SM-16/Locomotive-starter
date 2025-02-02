@@ -16,7 +16,11 @@
       <li><a href="#breadcrumb" class="hover:underline">breadcrumb</a></li>
       <li><a href="#card" class="hover:underline">card</a></li>
       <hr>
-      <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:"text-pink-600 hover:underline"%> </div>
+      <% if user_signed_in?%>
+        <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:"text-pink-600 hover:underline"%> </div>
+      <%else%>
+      <div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:"text-pink-600 hover:underline"%> </div>
+      <%end%>
       <hr>
       <li><button  class="text-slate-600 cursor-default">companies</button></li>
       <li><button  class="text-slate-600 cursor-default">copy code</button></li>
@@ -49,7 +53,7 @@
 
   <!-- Main Content -->
     <div class="ml-64 min-h-[300vh] p-8 gap-5 flex-1">
-    <h1 class="text-3xl font-bold mb-8">Components Documentation <span class="text-sm font-extrabold text-rose-500">(FREE)</span></h1>
+    <h1 class="text-3xl font-bold mb-8">Components Documentation<span class="text-sm font-extrabold text-rose-500">(FREE)</span></h1>
 
     <section id="installation" class="mb-20 text-sm">
       <h2 class="text-2xl font-bold mb-4">Installation</h2>
