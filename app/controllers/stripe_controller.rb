@@ -8,7 +8,7 @@ class StripeController < ApplicationController
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"price_1QnZAVKa5vbvZR8VtVzbooMt",
+                price:"price_1Ql4PZKa5vbvZR8Vok1makVP",
                 quantity: 1,
             }]
         })
@@ -21,7 +21,7 @@ class StripeController < ApplicationController
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"price_1QnZAdKa5vbvZR8VQkkAxM2m",
+                price:"price_1Ql4QkKa5vbvZR8Vyid1OQzT",
                 quantity: 1,
             }]
         })
@@ -78,7 +78,7 @@ class StripeController < ApplicationController
                     session = event.data.object
                     @user = User.find_by(stripe_customer_id: session.customer)
 
-                    if session.amount_total == 5900
+                    if session.amount_total == 3900
                         @user.update(plan: "starter")
                     elsif session.amount_total == 1500
                         @user.update(plan: "starter")
