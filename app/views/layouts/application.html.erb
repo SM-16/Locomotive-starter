@@ -4,7 +4,8 @@
     <meta name="robots" content="index,follow">
     <%= favicon_link_tag 'icon.png', type: 'image/png' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="image" content="<%= asset_url "og.png"%>">
+    <meta property="og:image" content="<%= asset_url "og.png"%>">
+    <meta property="twitter:image" content="<%= asset_url "og.png"%>">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tag %>
