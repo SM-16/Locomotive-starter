@@ -188,10 +188,11 @@
       <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/companies"%&gt;</code></pre>
     </section>
 
-
-
-
-  
+    <% if user_signed_in?%>
+      <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:"mb-10 text-5xl text-slate-800 hover:underline font-mono text-center font-bold"%> </div>
+    <%else%>
+      <div div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:"mb-10 text-5xl text-slate-800 hover:underline font-mono text-center font-bold"%> </div>
+    <%end%>
   
   </div>
 </div>
