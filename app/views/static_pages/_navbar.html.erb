@@ -17,6 +17,8 @@
                 <%= link_to "Documentation", documentation_docs_page_path%>
             <% elsif current_user.plan =="premium"%>
                 <%= link_to "Documentation", documentation_docs_page_updated_path%>
+            <% else %>
+                <%= link_to "Preview", documentation_docs_page_free_path%>
             <%end%>
             <p class="border border-red-300 bg-red-100 text-red-500 rounded-md px-3 p-1">
                 <%= current_user.plan%>
