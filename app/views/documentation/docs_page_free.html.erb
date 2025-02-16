@@ -17,9 +17,9 @@
       <li><a href="#card" class="hover:underline font-semibold">card</a></li>
       <hr>
       <% if user_signed_in?%>
-        <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:" font-semiboldtext-pink-600 hover:underline"%> </div>
+        <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:" font-semibold text-pink-600 hover:underline"%> </div>
       <%else%>
-      <div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:" font-semiboldtext-pink-600 hover:underline"%> </div>
+      <div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:" font-semibold text-pink-600 hover:underline"%> </div>
       <%end%>
       <hr>
       <li><button  class="text-slate-600 cursor-not-allowed font-semibold">companies</button></li>
