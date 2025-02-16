@@ -1,58 +1,58 @@
 <%= render "static_pages/navbar_docs"%>
 <div class="h-screen">
   <!-- Sidebar -->
-  <div class="w-64 h-screen bg-gray-100 p-4 fixed overflow-y-auto">
-    <h2 class="text-xl font-extrabold mb-4 font-mono">Components</h2>
-    <ul class="space-y-2 *:*:font-semibold *:*:font-mono">
-      <li><a href="#installation" class="hover:underline">installation</a></li>
+  <div class="lg:w-64 h-screen bg-gray-100 p-4 fixed overflow-y-auto lg:block hidden w-0">
+    <h2 class="text-xl font-extrabold mb-4 font-mono ">Components</h2>
+    <ul class="space-y-2 *:*:font-semibold *:*:font-mono ">
+      <li><a href="#installation" class="hover:underline font-semibold">installation</a></li>
       <hr>
-      <li><a href="#accordion" class="hover:underline">accordion</a></li>
-      <li><a href="#alert" class="hover:underline">alert</a></li>
-      <li><a href="#appstore" class="hover:underline">appstore</a></li>
-      <li><a href="#avatar" class="hover:underline">avatar</a></li>
-      <li><a href="#badge" class="hover:underline">badge</a></li>
-      <li><a href="#banner" class="hover:underline">banner</a></li>
-      <li><a href="#banner-with-link" class="hover:underline">banner (with link)</a></li>
-      <li><a href="#breadcrumb" class="hover:underline">breadcrumb</a></li>
-      <li><a href="#card" class="hover:underline">card</a></li>
+      <li><a href="#accordion" class="hover:underline font-semibold">accordion</a></li>
+      <li><a href="#alert" class="hover:underline font-semibold">alert</a></li>
+      <li><a href="#appstore" class="hover:underline font-semibold">appstore</a></li>
+      <li><a href="#avatar" class="hover:underline font-semibold">avatar</a></li>
+      <li><a href="#badge" class="hover:underline font-semibold">badge</a></li>
+      <li><a href="#banner" class="hover:underline font-semibold">banner</a></li>
+      <li><a href="#banner-with-link" class="hover:underline font-semibold">banner (with link)</a></li>
+      <li><a href="#breadcrumb" class="hover:underline font-semibold">breadcrumb</a></li>
+      <li><a href="#card" class="hover:underline font-semibold">card</a></li>
       <hr>
       <% if user_signed_in?%>
-        <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:"text-pink-600 hover:underline"%> </div>
+        <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:" font-semiboldtext-pink-600 hover:underline"%> </div>
       <%else%>
-      <div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:"text-pink-600 hover:underline"%> </div>
+      <div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:" font-semiboldtext-pink-600 hover:underline"%> </div>
       <%end%>
       <hr>
-      <li><button  class="text-slate-600 cursor-not-allowed">companies</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">copy code</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">checkbox</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">copyright footer</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">features</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">footer</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">github</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">headlines</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">indicator</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">jumbotron</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">kbd</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">links</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">navbar</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">navbar (glossy)</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">loading</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">pricing</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">product hunt badge</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">quote</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">select</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">skeleton</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">social media</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">speed dial</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">testimonials</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">toggle</button></li>
-      <li><button  class="text-slate-600 cursor-not-allowed">video</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">companies</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">copy code</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">checkbox</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">copyright footer</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">features</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">footer</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">github</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">headlines</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">indicator</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">jumbotron</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">kbd</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">links</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">navbar</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">navbar (glossy)</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">loading</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">pricing</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">product hunt badge</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">quote</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">select</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">skeleton</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">social media</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">speed dial</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">testimonials</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">toggle</button></li>
+      <li><button  class="text-slate-600 cursor-not-allowed font-semibold">video</button></li>
     </ul>
 
   </div>
 
   <!-- Main Content -->
-    <div class="ml-64 min-h-[300vh] p-8 gap-5 flex-1">
+    <div class="lg:ml-64 ml-0 min-h-[300vh] p-8 gap-5 flex-1">
     <h1 class="text-3xl font-bold mb-8">Components Documentation<span class="text-sm font-extrabold text-rose-500">(FREE)</span></h1>
 
     <section id="installation" class="mb-20 text-sm">
@@ -68,7 +68,7 @@
         </div>
      
       </p>
-      <p class="my-2 w-[70%]">
+      <p class="my-2 lg:w-[70%] ">
         2. Go to this github <a class="text-blue-700 hover:underline" target="_blank" href="https://github.com/SM-16/Rails-elements-free">repository</a> and clone it. Add the components folder to your<%= render "static_pages/components/kbd", name:"app/views"%>
         folder. You can add the animations.css file to <%= render "static_pages/components/kbd", name:"app/stylesheets"%> 
       </p>
@@ -79,7 +79,7 @@
       <div class="mb-4">
         <%= render "static_pages/components/accordion", title:"Components", description:"A collection of UI components built with Tailwind CSS"%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/accordion", title:"Components", description:"A collection of UI components built with Tailwind CSS"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/accordion", title:"Components", description:"A collection of UI components built with Tailwind CSS"%&gt;</code></pre>
     </section>
     
     <section id="alert" class="mb-20">
@@ -87,7 +87,7 @@
       <div class="mb-4">
         <%= render "static_pages/components/alert", text:"This is an alert component", color:"red"%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/alert", text:"This is an alert component", color:"red"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/alert", text:"This is an alert component", color:"red"%&gt;</code></pre>
     </section>
 
     <section id="appstore" class="mb-20">
@@ -95,7 +95,7 @@
       <div class="mb-4">
         <%= render "static_pages/components/appstore"%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/appstore"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/appstore"%&gt;</code></pre>
     </section>
 
     <!-- Continue with similar sections for each component -->
@@ -104,7 +104,7 @@
       <div class="mb-4">
         <%= render "static_pages/components/avatar", src:"https://images.unsplash.com/photo-1734899848867-02ac05338425?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", size_px:100, alt:"Avatar"%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/avatar", src:"image-url", size_px:100, alt:"avatar"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/avatar", src:"image-url", size_px:100, alt:"avatar"%&gt;</code></pre>
     </section>
 
     <section id="badge" class="mb-20">
@@ -112,7 +112,7 @@
       <div class="mb-4">
         <%= render "static_pages/components/badge", text:"Badge", color:"red"%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/badge", text:"Badge", color:"red"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/badge", text:"Badge", color:"red"%&gt;</code></pre>
     </section>
 
     <section id="banner" class="mb-20">
@@ -137,7 +137,7 @@
       </script>
       
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/banner", text:"This is the text of the banner"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/banner", text:"This is the text of the banner"%&gt;</code></pre>
     </section>
     <section id="banner-with-link" class="mb-20">
       <h2 class="text-2xl font-bold mb-4">Banner (with link)</h2>
@@ -160,7 +160,7 @@
           }
       </script>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/banner_with_link", text:"This is a banner sample with a link"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/banner_with_link", text:"This is a banner sample with a link"%&gt;</code></pre>
     </section>
 
   
@@ -169,7 +169,7 @@
       <div class="mb-4">
         <%= render "static_pages/components/breadcrumb", breadcrumb_1:"docs", breadcrumb_2:"quickstart", breadcrumb_3:"CDN"%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/breadcrumb", breadcrumb_1:"docs", breadcrumb_2:"quickstart", breadcrumb_3:"CDN"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/breadcrumb", breadcrumb_1:"docs", breadcrumb_2:"quickstart", breadcrumb_3:"CDN"%&gt;</code></pre>
     </section>
 
     <section id="card" class="mb-20">
@@ -177,7 +177,7 @@
       <div class="mb-4">
         <%= render "static_pages/components/card", title:"Card title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",bg_color:"red", size_px:100%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/card", title:"Card title", text:" Lorem ipsum dolor sit amet, consectetur adipiscing elit. "%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/card", title:"Card title", text:" Lorem ipsum dolor sit amet, consectetur adipiscing elit. "%&gt;</code></pre>
     </section>
 
     <section id="companies" class="mb-20" >
@@ -185,7 +185,7 @@
       <div class="mb-4 flex justify-start ml-5">
         <%= render "static_pages/components/companies"%>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/companies"%&gt;</code></pre>
+      <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/companies"%&gt;</code></pre>
     </section>
 
     <% if user_signed_in?%>

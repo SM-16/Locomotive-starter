@@ -11,26 +11,24 @@
         
         
     </nav>
-    <div class="w-full flex flex-row  lg:justify-end md:justify-end justify-center items-center gap-5 lg:mr-0 md:mr-10 ">
+    <div class="flex lg:flex-row md:flex-row flex-col w-full justify-end items-center gap-8 ">
+        <%= link_to "Preview", documentation_docs_page_free_path, class:"lg:block md:block hidden"%>
         <%if user_signed_in?%>
             <% if current_user.plan =="starter"%>
                 <%= link_to "Documentation", documentation_docs_page_path%>
             <% elsif current_user.plan =="premium"%>
                 <%= link_to "Documentation", documentation_docs_page_updated_path%>
+            <%else%>
             <%end%>
-        <%else%>
-            <%= link_to "Preview", documentation_docs_page_free_path%>
-        <% end %>
-        <%if user_signed_in?%>
-
             <p class="border border-red-300 bg-red-100 text-red-500 rounded-md px-3 p-1">
                 <%= current_user.plan%>
             </p>
             <%= button_to "Log out", destroy_user_session_path, method: :delete%>            
         <%else%>
-            <%= link_to "Log In", new_user_session_path%>
-            <%= link_to "Sign Up", new_user_registration_path%>
-            
+            <div class="flex lg:gap-5 md:gap-5 gap-3">
+                <%= link_to "Log In", new_user_session_path, class:"flex gap-5"%>
+                <%= link_to "Sign Up", new_user_registration_path, class:"flex gap-5"%>
+            </div>  
         <%end%>
     </div>
 </header>

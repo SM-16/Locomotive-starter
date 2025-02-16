@@ -12,7 +12,7 @@
         
         
     </nav>
-    <div class="flex w-full justify-end items-center gap-5 lg:mr-0 md:mr-10 mr-52">
+    <div class="flex lg:flex-row md:flex-row flex-col w-full justify-end items-center gap-8 ">
         <%if user_signed_in?%>
             <% if current_user.plan =="starter"%>
                 <%= link_to "Documentation", documentation_docs_page_path%>
@@ -26,8 +26,11 @@
             </p>
             <%= button_to "Log out", destroy_user_session_path, method: :delete%>            
         <%else%>
-            <%= link_to "Log In", new_user_session_path%>
-            <%= link_to "Sign Up", new_user_registration_path%>
+            <div class="flex gap-3">
+
+                <%= link_to "Log In", new_user_session_path, class:"flex gap-5"%>
+                <%= link_to "Sign Up", new_user_registration_path, class:"flex gap-5"%>
+            </div>
             
         <%end%>
     </div>

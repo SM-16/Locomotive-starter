@@ -1,463 +1,466 @@
-<%= render "static_pages/navbar_docs"%>
-<div class="min-h-screen">
-  <!-- Sidebar -->
-  <div class="w-64 h-screen bg-gray-100 p-4 fixed overflow-y-auto">
-    <h2 class="text-xl font-extrabold mb-4 font-mono">Components</h2>
-    <ul class="space-y-2 *:*:font-semibold *:*:font-mono">
-      <li><a href="#installation" class="hover:underline">installation</a></li>
-      <li><a href="#SaaS" class="hover:underline">Rails SaaS template</a></li>
-      <hr>
-      <li><a href="#accordion" class="hover:underline">accordion</a></li>
-      <li><a href="#alert" class="hover:underline">alert</a></li>
-      <li><a href="#appstore" class="hover:underline">appstore</a></li>
-      <li><a href="#avatar" class="hover:underline">avatar</a></li>
-      <li><a href="#badge" class="hover:underline">badge</a></li>
-      <li><a href="#banner" class="hover:underline">banner</a></li>
-      <li><a href="#banner-with-link" class="hover:underline">banner (with link)</a></li>
-      <li><a href="#breadcrumb" class="hover:underline">breadcrumb</a></li>
-      <li><a href="#card" class="hover:underline">card</a></li>
-      <li><a href="#companies" class="hover:underline">companies</a></li>
-      <li><a href="#copy-code" class="hover:underline">copy code</a></li>
-      <li><a href="#checkbox" class="hover:underline">checkbox</a></li>
-      <li><a href="#copyright" class="hover:underline">copyright footer</a></li>
-      <li><a href="#features" class="hover:underline">features</a></li>
-      <li><a href="#footer" class="hover:underline">footer</a></li>
-      <li><a href="#github" class="hover:underline">github</a></li>
-      <li><a href="#headlines" class="hover:underline">headlines</a></li>
-      <li><a href="#indicator" class="hover:underline">indicator</a></li>
-      <li><a href="#jumbotron" class="hover:underline">jumbotron</a></li>
-      <li><a href="#kbd" class="hover:underline">kbd</a></li>
-      <li><a href="#links" class="hover:underline">links</a></li>
-      <li><a href="#navbar" class="hover:underline">navbar</a></li>
-      <li><a href="#navbar-glossy" class="hover:underline">navbar (glossy)</a></li>
-      <li><a href="#loading" class="hover:underline">loading</a></li>
-      <li><a href="#pricing" class="hover:underline">pricing</a></li>
-      <li><a href="#product-hunt-badge" class="hover:underline">product hunt badge</a></li>
-      <li><a href="#quote" class="hover:underline">quote</a></li>
-      <li><a href="#select" class="hover:underline">select</a></li>
-      <li><a href="#skeleton" class="hover:underline">skeleton</a></li>
-      <li><a href="#social" class="hover:underline">social media</a></li>
-      <li><a href="#speed-dial" class="hover:underline">speed dial</a></li>
-      <li><a href="#testimonials" class="hover:underline">testimonials</a></li>
-      <li><a href="#toggle" class="hover:underline">toggle</a></li>
-      <li><a href="#video" class="hover:underline">video</a></li>
-    </ul>
+<div class="lg:w-64 h-screen bg-gray-100 p-4 fixed overflow-y-auto lg:block hidden w-0">
+  <h2 class="text-xl font-extrabold mb-4 font-mono ">Components</h2>
+  <ul class="space-y-2 *:*:font-semibold *:*:font-mono ">
+    <li><a href="#installation" class="hover:underline">installation</a></li>
+    <hr>
+    <li><a href="#accordion" class="hover:underline">accordion</a></li>
+    <li><a href="#alert" class="hover:underline">alert</a></li>
+    <li><a href="#appstore" class="hover:underline">appstore</a></li>
+    <li><a href="#avatar" class="hover:underline">avatar</a></li>
+    <li><a href="#badge" class="hover:underline">badge</a></li>
+    <li><a href="#banner" class="hover:underline">banner</a></li>
+    <li><a href="#banner-with-link" class="hover:underline">banner (with link)</a></li>
+    <li><a href="#breadcrumb" class="hover:underline">breadcrumb</a></li>
+    <li><a href="#card" class="hover:underline">card</a></li>
+    <hr>
+    <% if user_signed_in?%>
+      <div data-turbo="false"><%= button_to "unlock all with the paid version", stripe_premium_checkout_path, class:"text-pink-600 hover:underline"%> </div>
+    <%else%>
+    <div data-turbo="false"><%= link_to "unlock all with the paid version", new_user_session_path, class:"text-pink-600 hover:underline"%> </div>
+    <%end%>
+    <hr>
+    <li><button  class="text-slate-600 cursor-not-allowed">companies</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">copy code</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">checkbox</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">copyright footer</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">features</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">footer</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">github</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">headlines</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">indicator</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">jumbotron</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">kbd</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">links</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">navbar</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">navbar (glossy)</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">loading</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">pricing</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">product hunt badge</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">quote</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">select</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">skeleton</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">social media</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">speed dial</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">testimonials</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">toggle</button></li>
+    <li><button  class="text-slate-600 cursor-not-allowed">video</button></li>
+  </ul>
 
-  </div>
+</div>
 
-  <!-- Main Content -->
-    <div class="ml-64 min-h-[1000vh] p-8 gap-5 flex-1">
-    <h1 class="text-3xl font-bold mb-8">Components Documentation</h1>
+<!-- Main Content -->
+  <div class="lg:ml-64 ml-0 min-h-[300vh] p-8 gap-5 flex-1">
+  <h1 class="text-3xl font-bold mb-8">Components Documentation</h1>
 
-    <section id="installation" class="mb-20 text-sm">
-      <h2 class="text-2xl font-bold mb-4">Installation</h2>
-      <p class="mb-2">
-        1. Install tailwind via CDN or with your gemfile
+  <section id="installation" class="mb-20 text-sm">
+    <h2 class="text-2xl font-bold mb-4">Installation</h2>
+    <p class="mb-2">
+      1. Install tailwind via CDN or with your gemfile
 
-        <div class="ml-2">
-          <p class="mb-1 text-sm font-semibold text-slate-700">Gemfile</p>
-          <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs text-blue-400"><code class="text-pink-400">./bin/bundle</code> add tailwindcss-ruby <br><code class="text-pink-400">./bin/bundle</code> add tailwindcss-rails <br><code class="text-pink-400">./bin/rails</code> tailwindcss:install</code></pre>
-          <p class="mb-1 mt-1 text-sm font-semibold text-slate-700">CDN script</p>
-          <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;script src="https://unpkg.com/@tailwindcss/browser@4"&gt;&lt;script&gt;</code></pre>
-        </div>
-     
-      </p>
-      <p class="my-2 w-[70%]">
-        2. Go to this github <a class="text-blue-700 hover:underline" target="_blank" href="https://gitfront.io/r/S213123/U5uHNGVbXxcE/Rails-Elements/">repository</a> and clone it. Add the components folder to your<%= render "static_pages/components/kbd", name:"app/views"%>
-        folder. You can add the animations.css file to <%= render "static_pages/components/kbd", name:"app/stylesheets"%> 
-      </p>
-    </section>
-    <section id="SaaS" class="mb-20 text-sm">
-      <h2 class="text-2xl font-bold mb-4">Rails SaaS template</h2>
-      Get it <a href="https://github.com/SM-16/Locomotive" class="text-blue-500 hover:underline">here</a>
-    </section>
-    <!-- Components -->
-    <section id="accordion" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Accordion</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/accordion", title:"Components", description:"A collection of UI components built with Tailwind CSS"%>
+      <div class="ml-2">
+        <p class="mb-1 text-sm font-semibold text-slate-700">Gemfile</p>
+        <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs text-blue-400"><code class="text-pink-400">./bin/bundle</code> add tailwindcss-ruby <br><code class="text-pink-400">./bin/bundle</code> add tailwindcss-rails <br><code class="text-pink-400">./bin/rails</code> tailwindcss:install</code></pre>
+        <p class="mb-1 mt-1 text-sm font-semibold text-slate-700">CDN script</p>
+        <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;script src="https://unpkg.com/@tailwindcss/browser@4"&gt;&lt;script&gt;</code></pre>
       </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/accordion", title:"Components", description:"A collection of UI components built with Tailwind CSS"%&gt;</code></pre>
-    </section>
+   
+    </p>
+    <p class="my-2 w-[70%]">
+      2. Go to this github <a class="text-blue-700 hover:underline" target="_blank" href="https://gitfront.io/r/S213123/U5uHNGVbXxcE/Rails-Elements/">repository</a> and clone it. Add the components folder to your<%= render "static_pages/components/kbd", name:"app/views"%>
+      folder. You can add the animations.css file to <%= render "static_pages/components/kbd", name:"app/stylesheets"%> 
+    </p>
+  </section>
+  <section id="SaaS" class="mb-20 text-sm">
+    <h2 class="text-2xl font-bold mb-4">Rails SaaS template</h2>
+    Get it <a href="https://github.com/SM-16/Locomotive" class="text-blue-500 hover:underline">here</a>
+  </section>
+  <!-- Components -->
+  <section id="accordion" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Accordion</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/accordion", title:"Components", description:"A collection of UI components built with Tailwind CSS"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/accordion", title:"Components", description:"A collection of UI components built with Tailwind CSS"%&gt;</code></pre>
+  </section>
+  
+  <section id="alert" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Alert</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/alert", text:"This is an alert component", color:"red"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/alert", text:"This is an alert component", color:"red"%&gt;</code></pre>
+  </section>
+
+  <section id="appstore" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Appstore</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/appstore"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/appstore"%&gt;</code></pre>
+  </section>
+
+  <!-- Continue with similar sections for each component -->
+  <section id="avatar" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Avatar</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/avatar", src:"https://images.unsplash.com/photo-1734899848867-02ac05338425?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", size_px:100, alt:"Avatar"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/avatar", src:"image-url", size_px:100, alt:"avatar"%&gt;</code></pre>
+  </section>
+
+  <section id="badge" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Badge</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/badge", text:"Badge", color:"red"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/badge", text:"Badge", color:"red"%&gt;</code></pre>
+  </section>
+
+  <section id="banner" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Banner</h2>
+    <div class="mb-4">
+      <div id="banner_modal" class="group top-0 group-active:hidden start-0 w-fit z-50 p-4 border-b border-gray-200 bg-gray-50">
+        <div class="flex justify-center items-center">
+            <p class="flex justify-center items-center text-sm text-center w-[100%] font-normal text-gray-500 dark:text-gray-400">
+              This is a banner sample
+            </p>
+            <button class="w-fit text-slate-500 p-3 hover:bg-slate-200 rounded-lg" onclick="myFunction()">
+                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+          document.getElementById("banner_modal").remove();
+        }
+    </script>
     
-    <section id="alert" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Alert</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/alert", text:"This is an alert component", color:"red"%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/alert", text:"This is an alert component", color:"red"%&gt;</code></pre>
-    </section>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/banner", text:"This is the text of the banner"%&gt;</code></pre>
+  </section>
+  <section id="banner-with-link" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Banner (with link)</h2>
+    <div class="mb-4">
+      <div id="banner_modal_with_link" class=" group top-0 group-active:hidden start-0 w-full z-50 p-4 border-b border-gray-200 bg-gray-50">
+        <div class="flex justify-center items-center w-full">
+            <p class="flex justify-center items-center text-sm text-center w-[100%] font-normal text-gray-500 dark:text-gray-400">
+                This is a banner sample with a &nbsp;<%= link_to "link", "#", class:"text-blue-500 hover:underline"%>
+            </p>
+            <button class="w-fit text-slate-500 p-3 hover:bg-slate-200 rounded-lg" onclick="destroy_banner_with_link()">
+                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script>
+        function destroy_banner_with_link() {
+          document.getElementById("banner_modal_with_link").remove();
+        }
+    </script>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/banner_with_link", text:"This is a banner sample with a link"%&gt;</code></pre>
+  </section>
 
-    <section id="appstore" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Appstore</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/appstore"%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/appstore"%&gt;</code></pre>
-    </section>
 
-    <!-- Continue with similar sections for each component -->
-    <section id="avatar" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Avatar</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/avatar", src:"https://images.unsplash.com/photo-1734899848867-02ac05338425?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", size_px:100, alt:"Avatar"%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/avatar", src:"image-url", size_px:100, alt:"avatar"%&gt;</code></pre>
-    </section>
+  <section id="breadcrumb" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Breadcrumb</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/breadcrumb", breadcrumb_1:"docs", breadcrumb_2:"quickstart", breadcrumb_3:"CDN"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/breadcrumb", breadcrumb_1:"docs", breadcrumb_2:"quickstart", breadcrumb_3:"CDN"%&gt;</code></pre>
+  </section>
 
-    <section id="badge" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Badge</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/badge", text:"Badge", color:"red"%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/badge", text:"Badge", color:"red"%&gt;</code></pre>
-    </section>
+  <section id="card" class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Card</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/card", text:"Card title", description:"Card description",bg_color:"red", size_px:100%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/card", title:"Card title", description:"Card description"%&gt;</code></pre>
+  </section>
 
-    <section id="banner" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Banner</h2>
-      <div class="mb-4">
-        <div id="banner_modal" class="group top-0 group-active:hidden start-0 w-fit z-50 p-4 border-b border-gray-200 bg-gray-50">
-          <div class="flex justify-center items-center">
-              <p class="flex justify-center items-center text-sm text-center w-[100%] font-normal text-gray-500 dark:text-gray-400">
-                This is a banner sample
-              </p>
-              <button class="w-fit text-slate-500 p-3 hover:bg-slate-200 rounded-lg" onclick="myFunction()">
-                  <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                  </svg>
-              </button>
-          </div>
-      </div>
-      <script>
-          function myFunction() {
-            document.getElementById("banner_modal").remove();
-          }
-      </script>
-      
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/banner", text:"This is the text of the banner"%&gt;</code></pre>
-    </section>
-    <section id="banner-with-link" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Banner (with link)</h2>
-      <div class="mb-4">
-        <div id="banner_modal_with_link" class=" group top-0 group-active:hidden start-0 w-full z-50 p-4 border-b border-gray-200 bg-gray-50">
-          <div class="flex justify-center items-center w-full">
-              <p class="flex justify-center items-center text-sm text-center w-[100%] font-normal text-gray-500 dark:text-gray-400">
-                  This is a banner sample with a &nbsp;<%= link_to "link", "#", class:"text-blue-500 hover:underline"%>
-              </p>
-              <button class="w-fit text-slate-500 p-3 hover:bg-slate-200 rounded-lg" onclick="destroy_banner_with_link()">
-                  <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                  </svg>
-              </button>
-          </div>
-      </div>
-      <script>
-          function destroy_banner_with_link() {
-            document.getElementById("banner_modal_with_link").remove();
-          }
-      </script>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/banner_with_link", text:"This is a banner sample with a link"%&gt;</code></pre>
-    </section>
+  <section id="companies" class="mb-20" >
+    <h2 class="text-2xl font-bold mb-4" >Companies</h2>
+    <div class="mb-4 flex justify-start ml-5">
+      <%= render "static_pages/components/companies"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/companies"%&gt;</code></pre>
+  </section>
 
+  <section class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Companies Color</h2>
+    <div class="mb-4 flex justify-start ml-5">
+      <%= render "static_pages/components/companies_color"%>
+    </div>
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/companies_color"%&gt;</code></pre>
+  </section>
+
+  <section class="mb-20">
+    <h2 class="text-2xl font-bold mb-4">Companies Scale</h2>
+    <div class="mb-4 flex justify-start ml-5">
+      <%= render "static_pages/components/companies_scale"%>
+    </div>  
+    <pre class="bg-slate-900 text-slate-100 p-4 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/companies_scale"%&gt;</code></pre>
+  </section>
   
-    <section id="breadcrumb" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Breadcrumb</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/breadcrumb", breadcrumb_1:"docs", breadcrumb_2:"quickstart", breadcrumb_3:"CDN"%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/breadcrumb", breadcrumb_1:"docs", breadcrumb_2:"quickstart", breadcrumb_3:"CDN"%&gt;</code></pre>
-    </section>
+  <section class="mb-20">
+    <h2 id="copy-code" class="text-2xl font-bold mb-4">Copy Code</h2>
+    <div class="flex flex-col mb-4">
+      <%= render "static_pages/components/copy_code"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/copy_code"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section id="card" class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Card</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/card", text:"Card title", description:"Card description",bg_color:"red", size_px:100%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/card", title:"Card title", description:"Card description"%&gt;</code></pre>
-    </section>
+  <section class="mb-20">
+    <h2 id="checkbox" class="text-2xl font-bold mb-4">Checkbox</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/checkbox", name:"Checkbox"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/checkbox", name:"Checkbox"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section id="companies" class="mb-20" >
-      <h2 class="text-2xl font-bold mb-4" >Companies</h2>
-      <div class="mb-4 flex justify-start ml-5">
-        <%= render "static_pages/components/companies"%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/companies"%&gt;</code></pre>
-    </section>
+  <section class="mb-20">
+    <h2 id="copyright" class="text-2xl font-bold mb-4">Copyright Footer</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/copyright_footer"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/copyright_footer"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Companies Color</h2>
-      <div class="mb-4 flex justify-start ml-5">
-        <%= render "static_pages/components/companies_color"%>
-      </div>
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/companies_color"%&gt;</code></pre>
-    </section>
+  <section class="mb-20">
+    <h2 id="features" class="text-2xl font-bold mb-4">Features</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/features"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-16 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/features"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Companies Scale</h2>
-      <div class="mb-4 flex justify-start ml-5">
-        <%= render "static_pages/components/companies_scale"%>
-      </div>  
-      <pre class="bg-slate-900 text-slate-100 p-4 rounded w-fit"><code class="text-xs">&lt;%= render "components/companies_scale"%&gt;</code></pre>
-    </section>
+  <section class="mb-20">
+    <h2 id="footer" class="text-2xl font-bold mb-4">Footer</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/footer"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/footer"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="github" class="text-2xl font-bold mb-4">Github</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/github"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/github"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="headlines" class="text-2xl font-bold mb-4">Headlines</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/headline_1", text:"Headline"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/headline_1", text:"Headline"%&gt;</code></pre>
+    </div>
+    <div class="mb-4">
+      <%= render "static_pages/components/headline_2",text:"Headline"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/headline_2", text:"Headline"%&gt;</code></pre>
+    </div>
+    <div class="mb-4">
+      <%= render "static_pages/components/headline_3",text:"Headline"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/headline_3", text:"Headline"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="indicator" class="text-2xl font-bold mb-4">Indicator</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/indicator", color:"red", name:"indicator"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/indicator", color:"red", name:"indicator"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="jumbotron" class="text-2xl font-bold mb-4">Jumbotron</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/jumbotron"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/jumbotron"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="kbd" class="text-2xl font-bold mb-4">KBD</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/kbd", name:"Shift + L"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/kbd", name:"Shift + L"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="links" class="text-2xl font-bold mb-4">Links</h2>
+    <div class="mb-4 flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <%= render "static_pages/components/link_to_1", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%>
+        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/link_to_1", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%&gt;</code></pre>
+      </div>
+      <div class="flex flex-col gap-2">
+        <%= render "static_pages/components/link_to_2", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"red"%>
+        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/link_to_2", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%&gt;</code></pre>
+      </div>
+      <div class="flex flex-col gap-2">
+        <%= render "static_pages/components/link_to_3", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"red"%>
+        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/link_to_3", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"red"%&gt;</code></pre>
+      </div>
+      <div class="flex flex-col gap-2">
+        <%= render "static_pages/components/link_to_4", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%>
+        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/link_to_4", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="navbar" class="text-2xl font-bold mb-4">Navbar</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/navbar"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "static_pages/components/navbar"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="navbar-glossy" class="text-2xl font-bold mb-4">Navbar (Glossy)</h2>
+    <div class="mb-4">
+      <%= image_tag("https://images.unsplash.com/photo-1656489782764-443559c29211?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      class:"h-[80px] object-cover absolute w-[1000px] ")%>
+      <nav class="w-full  border-b border-blue-100 font-thin z-50 px-5 h-[80px] flex items-center gap-5 bg-blue-50 text-slate-900 backdrop-filter backdrop-blur-md bg-opacity-50">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-opacity-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/navbar_glossy"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="loading" class="text-2xl font-bold mb-4">Loading</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/loading", color:"blue"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/loading", color:"blue"%&gt;</code></pre>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="pricing" class="text-2xl font-bold mb-4">Pricing</h2>
+    <div class="mb-4 flex flex-col gap-10">
+      <div>
+        <%= render "static_pages/components/pricing_tier"%>
+        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/pricing_tier"%&gt;</code></pre>
+      </div>
+      <div>
+        <%= render "static_pages/components/pricing_tier_popular"%>
+        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/pricing_tier_popular"%&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-20">
+    <h2 id="product-hunt-badge" class="text-2xl font-bold mb-4">Product Hunt Badge</h2>
+    <div class="mb-4">
+      <a href="https://www.producthunt.com/posts/codebrisk" class="flex z-50 pr-4 bg-orange-500 text-white w-fit h-fit select-none bottom-3 left-3 font-semibold text-base rounded-xl">
+
+        <%= image_tag("https://techcrunch.com/wp-content/uploads/2014/09/product-hunt.png", class:"mt-1 w-[75px]")%> 
+        <div class="flex flex-col justify-center">
+            <p class="font-bold"> 
+                We are live on ProductHunt
+            </p>
+            <p class="font-semibold text-sm">
+                Would love your support
+            </p> 
+        </div> 
+    </a> 
     
-    <section class="mb-20">
-      <h2 id="copy-code" class="text-2xl font-bold mb-4">Copy Code</h2>
-      <div class="flex flex-col mb-4">
-        <%= render "static_pages/components/copy_code"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/copy_code"%&gt;</code></pre>
-      </div>
-    </section>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/product_hunt_badge"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="checkbox" class="text-2xl font-bold mb-4">Checkbox</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/checkbox", name:"Checkbox"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/checkbox", name:"Checkbox"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="quote" class="text-2xl font-bold mb-4">Quote</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/quote", text:"this is a quote"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/quote", text:"this is a quote"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="copyright" class="text-2xl font-bold mb-4">Copyright Footer</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/copyright_footer"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/copyright_footer"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="select" class="text-2xl font-bold mb-4">Select</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/select"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/select"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="features" class="text-2xl font-bold mb-4">Features</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/features"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-16 rounded w-fit"><code class="text-xs">&lt;%= render "components/features"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="skeleton" class="text-2xl font-bold mb-4">Skeleton</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/skeleton"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/skeleton"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="footer" class="text-2xl font-bold mb-4">Footer</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/footer"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/footer"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="social" class="text-2xl font-bold mb-4">Social Media</h2>
+    <div class="mb-4 flex flex-col gap-2">
+      <%= render "static_pages/components/social_media"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/social_media"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="github" class="text-2xl font-bold mb-4">Github</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/github"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/github"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="speed-dial" class="text-2xl font-bold mb-4">Speed Dial</h2>
+    <div class="mb-4">
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-10 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/speed_dial"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="headlines" class="text-2xl font-bold mb-4">Headlines</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/headline_1", text:"Headline"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/headline_1", text:"Headline"%&gt;</code></pre>
-      </div>
-      <div class="mb-4">
-        <%= render "static_pages/components/headline_2",text:"Headline"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/headline_2", text:"Headline"%&gt;</code></pre>
-      </div>
-      <div class="mb-4">
-        <%= render "static_pages/components/headline_3",text:"Headline"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/headline_3", text:"Headline"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="testimonials" class="text-2xl font-bold mb-4">Testimonials</h2>
+    <p class="text-xs">render this component on your website</p>
+    <div class="mb-4">
+      <%= render "static_pages/components/testimonials"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/testimonials"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="indicator" class="text-2xl font-bold mb-4">Indicator</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/indicator", color:"red", name:"indicator"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/indicator", color:"red", name:"indicator"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="toggle" class="text-2xl font-bold mb-4">Toggle</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/toggle", name:"Toggle"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/toggle", name:"Toggle"%&gt;</code></pre>
+    </div>
+  </section>
 
-    <section class="mb-20">
-      <h2 id="jumbotron" class="text-2xl font-bold mb-4">Jumbotron</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/jumbotron"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/jumbotron"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="kbd" class="text-2xl font-bold mb-4">KBD</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/kbd", name:"Shift + L"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/kbd", name:"Shift + L"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="links" class="text-2xl font-bold mb-4">Links</h2>
-      <div class="mb-4 flex flex-col gap-5">
-        <div class="flex flex-col gap-2">
-          <%= render "static_pages/components/link_to_1", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%>
-          <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/link_to_1", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%&gt;</code></pre>
-        </div>
-        <div class="flex flex-col gap-2">
-          <%= render "static_pages/components/link_to_2", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"red"%>
-          <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/link_to_2", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%&gt;</code></pre>
-        </div>
-        <div class="flex flex-col gap-2">
-          <%= render "static_pages/components/link_to_3", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"red"%>
-          <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/link_to_3", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"red"%&gt;</code></pre>
-        </div>
-        <div class="flex flex-col gap-2">
-          <%= render "static_pages/components/link_to_4", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%>
-          <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/link_to_4", text:"link", link:"#", bg_color:"red", border_color:"red", text_color:"white"%&gt;</code></pre>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="navbar" class="text-2xl font-bold mb-4">Navbar</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/navbar"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "static_pages/components/navbar"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="navbar-glossy" class="text-2xl font-bold mb-4">Navbar (Glossy)</h2>
-      <div class="mb-4">
-        <%= image_tag("https://images.unsplash.com/photo-1656489782764-443559c29211?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        class:"h-[80px] object-cover absolute w-[1000px] ")%>
-        <nav class="w-full  border-b border-blue-100 font-thin z-50 px-5 h-[80px] flex items-center gap-5 bg-blue-50 text-slate-900 backdrop-filter backdrop-blur-md bg-opacity-50">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-opacity-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
-            <li>
-              <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-            </li>
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-            </li>
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-            </li>
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/navbar_glossy"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="loading" class="text-2xl font-bold mb-4">Loading</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/loading", color:"blue"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/loading", color:"blue"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="pricing" class="text-2xl font-bold mb-4">Pricing</h2>
-      <div class="mb-4 flex flex-col gap-10">
-        <div>
-          <%= render "static_pages/components/pricing_tier"%>
-          <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/pricing_tier"%&gt;</code></pre>
-        </div>
-        <div>
-          <%= render "static_pages/components/pricing_tier_popular"%>
-          <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/pricing_tier_popular"%&gt;</code></pre>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="product-hunt-badge" class="text-2xl font-bold mb-4">Product Hunt Badge</h2>
-      <div class="mb-4">
-        <a href="https://www.producthunt.com/posts/codebrisk" class="flex z-50 pr-4 bg-orange-500 text-white w-fit h-fit select-none bottom-3 left-3 font-semibold text-base rounded-xl">
-
-          <%= image_tag("https://techcrunch.com/wp-content/uploads/2014/09/product-hunt.png", class:"mt-1 w-[75px]")%> 
-          <div class="flex flex-col justify-center">
-              <p class="font-bold"> 
-                  We are live on ProductHunt
-              </p>
-              <p class="font-semibold text-sm">
-                  Would love your support
-              </p> 
-          </div> 
-      </a> 
-      
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/product_hunt_badge"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="quote" class="text-2xl font-bold mb-4">Quote</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/quote", text:"this is a quote"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/quote", text:"this is a quote"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="select" class="text-2xl font-bold mb-4">Select</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/select"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/select"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="skeleton" class="text-2xl font-bold mb-4">Skeleton</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/skeleton"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/skeleton"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="social" class="text-2xl font-bold mb-4">Social Media</h2>
-      <div class="mb-4 flex flex-col gap-2">
-        <%= render "static_pages/components/social_media"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/social_media"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="speed-dial" class="text-2xl font-bold mb-4">Speed Dial</h2>
-      <div class="mb-4">
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-10 rounded w-fit"><code class="text-xs">&lt;%= render "components/speed_dial"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="testimonials" class="text-2xl font-bold mb-4">Testimonials</h2>
-      <p class="text-xs">render this component on your website</p>
-      <div class="mb-4">
-        <%= render "static_pages/components/testimonials"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/testimonials"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="toggle" class="text-2xl font-bold mb-4">Toggle</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/toggle", name:"Toggle"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/toggle", name:"Toggle"%&gt;</code></pre>
-      </div>
-    </section>
-
-    <section class="mb-20">
-      <h2 id="video" class="text-2xl font-bold mb-4">Video</h2>
-      <div class="mb-4">
-        <%= render "static_pages/components/video", src:"https://videos.pexels.com/video-files/3150598/3150598-hd_1920_1080_25fps.mp4"%>
-        <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded w-fit"><code class="text-xs">&lt;%= render "components/video", src:"https://videos.pexels.com/video-files/3150598/3150598-hd_1920_1080_25fps.mp4"%&gt;</code></pre>
-      </div>
-    </section>
+  <section class="mb-20">
+    <h2 id="video" class="text-2xl font-bold mb-4">Video</h2>
+    <div class="mb-4">
+      <%= render "static_pages/components/video", src:"https://videos.pexels.com/video-files/3150598/3150598-hd_1920_1080_25fps.mp4"%>
+      <pre class="bg-slate-900 text-slate-100 p-4 mt-2 rounded lg:w-fit md:w-[500px] overflow-x-scroll"><code class="text-xs">&lt;%= render "components/video", src:"https://videos.pexels.com/video-files/3150598/3150598-hd_1920_1080_25fps.mp4"%&gt;</code></pre>
+    </div>
+  </section>
 
 
-  
-  
-  </div>
+
+
+</div>
 </div>
 
 
