@@ -26,7 +26,7 @@
             </p>
             <%= button_to "Log out", destroy_user_session_path, method: :delete%>            
         <%else%>
-            <div class="flex gap-3">
+            <div class="flex lg:gap-5 md:gap-5 gap-3">
 
                 <%= link_to "Log In", new_user_session_path, class:"flex gap-5"%>
                 <%= link_to "Sign Up", new_user_registration_path, class:"flex gap-5"%>
